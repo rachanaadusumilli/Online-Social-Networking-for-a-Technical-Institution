@@ -1,0 +1,82 @@
+<?php
+include('login.php'); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+header("location: profile.php");
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#header {
+    
+    
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:center;
+    padding-top: 120px;
+    padding-right: 30px;
+    padding-bottom: 151px;
+    padding-left: 80px;
+}
+#footer {
+    background-color:#ff6500;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    padding-left: 165px; 	 
+}
+</style>
+</head>
+<body link="green" bgcolor=#fff3e5>
+
+<div id="header">
+<h1><img src="Logo.jpg" width=170 height=181></img></h1>
+</div>
+<div id="fieldset" style="position:absolute; overflow:hidden; left:50px; top:270px; width:600px; height:324px; z-index:0; border:orange 3px outset">
+
+<br><p align=center><b><font color=green>
+Department of INF
+
+Revaluation Results<p align=justify><b><a href='notices/'><p align='justify'><font color=orange>Click Here</a> - &nbsp;Revalution Results of all B.Tech Regular/Supplementary Examinations held in November 2015 are placed under Autonomous Section link in the Collge Website. <br><p align=center><b><font color='green'>FACULTY DEVELOPMENT PROGRAMME<p align=justify><b><a href='notices/fdp.pdf'><p align='justify'><font color=orange>Click Here</a> - &nbsp;A Three Day Faculty Development Program On "Professional Core of IT",scheduled from 21-23 of JAN-2016<br><p align=center><b><font color='green'><p align=justify><b><a href='notices/fdp1.docx'><p align='justify'><font color=orange>Click Here</a> - &nbsp;to DownLoad  Registration form
+	
+</div>
+
+<div id="section" style="width:800px; margin:50px">
+<form action="profile.php" method="post" align="center" >
+<b><font face="arial,sans serif" color=green>
+<div id="fieldset" style="position:absolute; overflow:hidden; left:700px; top:270px; width:600px; height:324px; z-index:0; border:orange 3px outset"><br/><br/><br/>
+RegdNo <br/><br/> <input type="text" name="Regdno" ><br/><br/>
+Password <br/> <br/> <input type="password" name="Password"><br/><br/>
+<button type="submit" name="login"><b><font face="arial,sans serif" color=green>Log In</font></b></button><br/><br/>
+<a href="register.html">Click to join the Clique</a>
+</div></font></b></form>
+</div>
+
+
+<div id="footer">
+Copyright © Gang GRAVity
+</div>
+
+</body>
+</html>
